@@ -1,0 +1,33 @@
+.info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  text-align: center;
+  background-color: #3054b7ca;
+  border-radius: 16px;
+}
+@media (prefers-color-scheme: dark) {
+  .info {
+    background-color: #3a4957cc;
+  }
+}
+
+.info .img__container {
+  height: 140px;
+  display: flex;
+  width: 200px;
+  overflow: hidden;
+  object-fit: cover;
+}
+.img__container img {
+  margin: 0 auto;
+  transform: scale(1.7);
+}
+.info .generalInfo {
+  max-height: 100%;
+  height: 350px;
+  width: 100%;
+}

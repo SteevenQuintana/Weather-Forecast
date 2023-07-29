@@ -37,5 +37,5 @@ interface WindInfo {
 }
 
 export interface ForecastProps {
-  forecast: Forecast
+  forecast: Forecast | null
 }

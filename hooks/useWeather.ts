@@ -85,7 +85,6 @@ const useWeather = () => {
       setSearch(city.name)
       setOptions([])
     }
-    console.log(city)
   }, [city])
 
   return {

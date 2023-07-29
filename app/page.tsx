@@ -1,30 +1,12 @@
 'use client'
-import Form from '@/components/Form'
+import Forecast from '@/components/Forecast/Forecast'
 import useWeather from '@/hooks/useWeather'
 
 export default function Home() {
-  const {
-    search,
-    options,
-    // forecast,
-    handleSearch,
-    handleSubmit,
-    onSelectOption
-    // isLoading,
-    // error
-  } = useWeather()
+  const { forecast, isLoading, error } = useWeather()
+  console.log(forecast)
   return (
     <main className='flex min-h-screen flex-col items-center justify-between p-24'>
-      <section className='form-section'>
-        <Form
-          search={search}
-          options={options}
-          handleSearch={handleSearch}
-          handleSubmit={handleSubmit}
-          onSelectOption={onSelectOption}
-        />
-      </section>
-
       {/* {forecast !== null && error === null && (
         <section className='forecast-section'>
           {isLoading ? (

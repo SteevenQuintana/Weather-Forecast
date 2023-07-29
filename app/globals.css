@@ -8,7 +8,13 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
@@ -24,4 +30,117 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+} */
+
+:root {
+  --background-body: #5680f2;
+  --background: #ffffff;
+  --text-main: #ffffff;
+  --text-bright: #000;
+  --focus: #0096bfab;
+  --button-base: #d0cfcf;
+  --button-hover: #4b73e1;
+  --form-text: #1d1d1d;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-body: #202b38;
+    --background: #161f27;
+    --text-main: #dbdbdb;
+    --text-bright: #fff;
+    --focus: #0096bfab;
+    --button-base: #1c2f3d;
+    --button-hover: #0d2233;
+    --form-text: #fff;
+  }
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  line-height: 1.4;
+  color: var(--text-main);
+  background: var(--background-body);
+  max-width: 800px;
+  margin: 0 auto;
+  text-rendering: optimizeLegibility;
+  height: 95vh;
+  background-image: url('/assets/background-light.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: var(--background-body);
+    color: var(--text-main);
+    background-image: url('/assets/background.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+input {
+  color: var(--form-text);
+  background-color: var(--background);
+  font-family: inherit;
+  font-size: inherit;
+  margin-right: 6px;
+  margin-bottom: 6px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  input {
+    background-color: var(--background);
+    color: var(--form-text);
+  }
+}
+
+button {
+  color: var(--form-text);
+  background-color: var(--background);
+  font-family: inherit;
+  font-size: inherit;
+  margin-right: 6px;
+  margin-bottom: 6px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  padding-right: 30px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+@media (prefers-color-scheme: dark) {
+  button {
+    background-color: var(--button-base);
+    color: var(--form-text);
+  }
+}
+
+button:hover {
+  background: var(--button-hover);
+  color: var(--text-main);
+}
+
+input:focus {
+  box-shadow: 0 0 0 2px var(--focus);
+}
+
+button:focus {
+  box-shadow: 0 0 0 2px var(--focus);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+ul {
+  list-style: none;
 }

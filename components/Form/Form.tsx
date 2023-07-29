@@ -8,6 +8,7 @@ interface Props {
   handleSearch: (event: React.ChangeEvent<HTMLInputElement>) => void
   onSelectOption: (option: Option) => void
 }
+
 const Form = ({
   search,
   options,
