@@ -6,16 +6,15 @@ import clouds from '@/public/assets/clouds.svg'
 import pressure from '@/public/assets/pressure.svg'
 import Highlight from './Highlight'
 
-import classes from './Highlights.module.css'
 import { ForecastProps } from '@/interfaces/cities.interface'
 import { getHour } from '@/helper/format'
 
 const Highlights = ({ forecast }: ForecastProps) => {
   if (forecast === null) return
   return (
-    <div className={classes.highlights}>
-      <h2>Today's Highlights</h2>
-      <div className={classes.container}>
+    <div className='h-full mx-4 md:mx-0 mb-8 text-center flex flex-col bg-[#3054b7ca] p-4 rounded-2xl dark:bg-[#3a4957cc]'>
+      <h2 className='text-2md font-bold mb-4'>Today's Highlights</h2>
+      <div className='grid grid-cols-[repeat(auto-fill,minmax(160px,1fr))] gap-3 h-full'>
         <Highlight
           title='Humidity'
           img={humidity}

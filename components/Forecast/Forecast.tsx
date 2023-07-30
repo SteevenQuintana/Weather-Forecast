@@ -1,11 +1,10 @@
 import { ForecastProps } from '../../interfaces/cities.interface'
 import Highlights from './Highlights/Highlights'
 import DayInformation from './DayInformation/DayInformation'
-import classes from './Forecast.module.css'
 
 const Forecast = ({ forecast }: ForecastProps) => {
   return (
-    <div className={classes.forecast}>
+    <div className='flex flex-col sm:grid sm:grid-cols-[40%_60%] gap-4'>
       <article>
         <DayInformation forecast={forecast} />
       </article>

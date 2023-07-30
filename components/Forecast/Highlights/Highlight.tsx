@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import classes from './Highlight.module.css'
 
 interface HighlightProps {
   title: string
@@ -9,9 +8,15 @@ interface HighlightProps {
 }
 
 const Highlight = ({ title, img, description, unit }: HighlightProps) => (
-  <div className={classes.highlight}>
+  <div className='w-full bg-[color:var(--background-body2)] flex flex-col justify-center text-center px-0 py-2 rounded-xl hover:bg-[color:var(--button-hover)] hover:text-[color:var(--text-main)] hover:cursor-pointer'>
     <h3>{title}</h3>
-    <Image src={img} alt='' height={90} width={90} />
+    <Image
+      src={img}
+      alt={description}
+      height={150}
+      width={150}
+      className='m-auto'
+    />
     <p>
       {description} <span>{unit}</span>
     </p>

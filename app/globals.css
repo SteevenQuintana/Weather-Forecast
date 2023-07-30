@@ -2,35 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-} */
 
 :root {
   --background-body: #5680f2;
@@ -41,6 +17,7 @@ body {
   --button-base: #d0cfcf;
   --button-hover: #4b73e1;
   --form-text: #1d1d1d;
+  --background-body2: rgb(16, 3, 83);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -53,17 +30,16 @@ body {
     --button-base: #1c2f3d;
     --button-hover: #0d2233;
     --form-text: #fff;
+    --background-body2: #202b38;
   }
 }
 
 body {
-  font-family: 'Space Grotesk', sans-serif;
   line-height: 1.4;
   color: var(--text-main);
   background: var(--background-body);
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
-  text-rendering: optimizeLegibility;
   height: 95vh;
   background-image: url('/assets/background-light.svg');
   background-repeat: no-repeat;
@@ -83,8 +59,6 @@ body {
 input {
   color: var(--form-text);
   background-color: var(--background);
-  font-family: inherit;
-  font-size: inherit;
   margin-right: 6px;
   margin-bottom: 6px;
   padding: 10px;
@@ -101,26 +75,13 @@ input {
 }
 
 button {
-  color: var(--form-text);
-  background-color: var(--background);
-  font-family: inherit;
-  font-size: inherit;
   margin-right: 6px;
   margin-bottom: 6px;
   padding: 10px;
   border: none;
   border-radius: 6px;
   outline: none;
-  padding-right: 30px;
-  padding-left: 30px;
   cursor: pointer;
-}
-
-@media (prefers-color-scheme: dark) {
-  button {
-    background-color: var(--button-base);
-    color: var(--form-text);
-  }
 }
 
 button:hover {
@@ -143,4 +104,8 @@ button:disabled {
 
 ul {
   list-style: none;
+}
+
+sup {
+  font-style: oblique;
 }
