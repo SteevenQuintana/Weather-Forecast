@@ -1,7 +1,7 @@
 export interface Option {
   name: string
-  lat: number
-  lon: number
+  lat: number | string
+  lon: number | string
   country: string
 }
 

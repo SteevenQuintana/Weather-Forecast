@@ -1,21 +1,11 @@
-import { Option } from '@/interfaces/cities.interface'
+'use client'
 import classes from './Form.module.css'
+import useSearch from '@/hooks/useSearch'
 
-interface Props {
-  search: string
-  options: Option[]
-  handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void
-  handleSearch: (event: React.ChangeEvent<HTMLInputElement>) => void
-  onSelectOption: (option: Option) => void
-}
+const Form = () => {
+  const { handleSearch, search, options, onSelectOption, handleSubmit } =
+    useSearch()
 
-const Form = ({
-  search,
-  options,
-  handleSubmit,
-  handleSearch,
-  onSelectOption
-}: Props) => {
   return (
     <div className={classes.search}>
       <h1>Weather Forecast</h1>
@@ -30,7 +20,12 @@ const Form = ({
         <ul className={classes.list}>
           {options.map((option, i) => (
             <li key={`${i}- ${option.lat} - ${option.lon}`}>
-              <button type='button' onClick={() => onSelectOption(option)}>
+              <button
+                type='button'
+                onClick={() => {
+                  onSelectOption(option)
+                }}
+              >
                 {option.name}, {option.country}
               </button>
             </li>
