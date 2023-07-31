@@ -3,11 +3,12 @@ import { Option } from '@/interfaces/cities.interface'
 import { getData } from '@/services/api'
 import { useRouter } from 'next/navigation'
 import { useCallback, useState } from 'react'
+import { toast } from 'react-hot-toast'
 
 const useSearch = () => {
   const [search, setSearch] = useState('')
   const [options, setOptions] = useState<Option[]>([])
-  const [error, setError] = useState<string | null>(null)
+  const [error, setError] = useState({ isError: false, message: '' })
 
   const router = useRouter()
 
@@ -19,7 +20,10 @@ const useSearch = () => {
   }
 
   const getCityInfo = useCallback(async (value: string) => {
-    if (value.trim() === '') return
+    if (value.trim() === '') {
+      setOptions([])
+      return
+    }
     try {
       const data = await getData(`${config.CITY_API}&q=${value.trim()}`)
       const dataNeeded: Option[] = data.map((data: any) => ({
@@ -32,22 +36,7 @@ const useSearch = () => {
       setOptions(dataNeeded)
       return dataNeeded[0]
     } catch (err) {
-      setError((err as Error).message)
-    }
-  }, [])
-
-  const getCityInfo2 = useCallback(async (value: string) => {
-    if (value.trim() === '') return
-    let lat, lon, country
-    try {
-      const data = await getData(`${config.CITY_API}&q=${value.trim()}`)
-      lat = data[0].lat
-      lon = data[0].lon
-      country = data[0].country
-
-      if (data) return { lat, lon, country }
-    } catch (err) {
-      setError((err as Error).message)
+      setError({ isError: true, message: (err as Error).message })
     }
   }, [])
 
@@ -60,10 +49,13 @@ const useSearch = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    if (options.length === 0) return
+    if (options.length === 0) {
+      toast.error('City not found, please introduce a valid city')
+      return
+    }
     setOptions([])
     setSearch('')
-    setError(null)
+    setError({ isError: false, message: '' })
     onSelectOption(options[0])
 
     router.push(`/weather/${options[0].name}`)
@@ -76,8 +68,7 @@ const useSearch = () => {
     handleSearch,
     onSelectOption,
     handleSubmit,
-    getCityInfo,
-    getCityInfo2
+    getCityInfo
   }
 }
 export default useSearch

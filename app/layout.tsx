@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Form from '@/components/Form/Form'
+import ToasterProvider from '@/providers/TotasterProvider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={`min-h-screen pt-8 ${inter.className}`}>
+        <ToasterProvider />
         <Form />
         {children}
       </body>

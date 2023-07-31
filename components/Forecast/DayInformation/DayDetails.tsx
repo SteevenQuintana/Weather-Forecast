@@ -39,9 +39,9 @@ const DayDetails = ({ forecast }: ForecastProps) => {
         <span>{tempType}</span>
       </p>
 
-      <div className='flex justify-end mr-8'>
+      <div className='flex justify-center'>
         <Button onClick={handleTempType} className='rounded-[100px]'>
-          {isCelsius ? '°F' : '°C'}
+          {isCelsius ? 'Change to °F' : 'Change °C'}
         </Button>
       </div>
     </div>
