@@ -11,7 +11,7 @@ const DayInformation = ({ forecast }: ForecastProps) => {
         <Image
           src={`https://openweathermap.org/img/wn/${forecast.weather.icon}@2x.png`}
           alt={forecast.weather.description}
-          width={100}
+          width={150}
           height={100}
           className='mx-auto my-0 scale-[1.7]'
           priority
