@@ -3,7 +3,7 @@ import Image from 'next/image'
 interface HighlightProps {
   title: string
   img: string
-  description: string
+  description: string | number
   unit: string
 }
 
@@ -12,13 +12,13 @@ const Highlight = ({ title, img, description, unit }: HighlightProps) => (
     <h3>{title}</h3>
     <Image
       src={img}
-      alt={description}
+      alt={description.toString()}
       height={150}
       width={150}
       className='m-auto'
     />
     <p>
-      {description} <span>{unit}</span>
+      {description.toString()} <span>{unit}</span>
     </p>
   </div>
 )

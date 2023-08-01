@@ -14,7 +14,6 @@ const DayInformation = ({ forecast }: ForecastProps) => {
           width={150}
           height={100}
           className='mx-auto my-0 scale-[1.7]'
-          priority
         />
       </div>
       <div className='max-h-full h-[340px] w-full'>

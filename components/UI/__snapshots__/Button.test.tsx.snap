@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button should match the snapshot 1`] = `
+<button
+  class="bg-[#ffffff] dark:bg-[#1c2f3d] text-[#1d1d1d] dark:text-[#dbdbdb] rounded-md py-2 px-7 undefined"
+  type="button"
+>
+  Click me
+</button>
+`;

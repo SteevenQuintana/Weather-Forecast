@@ -4,6 +4,14 @@ import { render, screen } from '@testing-library/react'
 import DayInformation from './DayInformation'
 import { Forecast } from '@/interfaces/cities.interface'
 
+jest.mock('next/image', () => ({
+  __esModule: true,
+  default: (props: any) => {
+    // eslint-disable-next-line jsx-a11y/alt-text, @next/next/no-img-element
+    return <img {...props} />
+  }
+}))
+
 const mockForecast: Forecast = {
   name: 'City Name',
   country: 'Country Name',
@@ -31,6 +39,12 @@ const mockForecast: Forecast = {
 describe('DayInformation', () => {
   it('renders correctly with forecast data', () => {
     render(<DayInformation forecast={mockForecast} />)
+
+    const img = screen.getByAltText('Sunny')
+    expect(img).toHaveAttribute(
+      'src',
+      `https://openweathermap.org/img/wn/${mockForecast.weather.icon}@2x.png`
+    )
 
     expect(screen.getByText("Today's information")).toBeInTheDocument()
     expect(screen.getByText('Sunny')).toBeInTheDocument()

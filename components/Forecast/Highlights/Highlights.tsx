@@ -18,37 +18,37 @@ const Highlights = ({ forecast }: ForecastProps) => {
         <Highlight
           title='Humidity'
           img={humidity}
-          description={forecast.main.humidity.toString()}
+          description={forecast.main.humidity}
           unit='%'
         />
         <Highlight
           title='Wind Speed'
           img={wind}
-          description={forecast.wind.speed.toString()}
+          description={forecast.wind.speed}
           unit='m/s'
         />
         <Highlight
           title='Clouds'
           img={clouds}
-          description={forecast.clouds.toString()}
+          description={forecast.clouds}
           unit='%'
         />
         <Highlight
           title='Sunrise'
           img={sunrise}
-          description={getHour(forecast.sunrise).toString()}
+          description={getHour(forecast.sunrise)}
           unit='a.m.'
         />
         <Highlight
           title='Sunset'
           img={sunset}
-          description={getHour(forecast.sunset).toString()}
+          description={getHour(forecast.sunset)}
           unit='p.m.'
         />
         <Highlight
           title='Pressure'
           img={pressure}
-          description={forecast.main.pressure.toString()}
+          description={forecast.main.pressure}
           unit='hPa'
         />
       </div>

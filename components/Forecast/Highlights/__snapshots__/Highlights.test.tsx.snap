@@ -1,0 +1,175 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Highlights should snapshots the Highlights component 1`] = `
+<div>
+  <div
+    class="h-full mx-4 md:mx-0 mb-8 text-center flex flex-col bg-[#3054b7ca] p-4 rounded-2xl dark:bg-[#3a4957cc]"
+  >
+    <h2
+      class="text-2md font-bold mb-4"
+    >
+      Today's Highlights
+    </h2>
+    <div
+      class="grid grid-cols-[repeat(auto-fill,minmax(160px,1fr))] gap-3 h-full"
+    >
+      <div
+        class="w-full bg-[color:var(--background-body2)] flex flex-col justify-center text-center px-0 py-2 rounded-xl hover:bg-[color:var(--button-hover)] hover:text-[color:var(--text-main)]"
+      >
+        <h3>
+          Humidity
+        </h3>
+        <img
+          alt="60"
+          class="m-auto"
+          data-nimg="1"
+          decoding="async"
+          height="150"
+          loading="lazy"
+          src="/_next/image?url=%2Fimg.jpg&w=384&q=75"
+          srcset="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=384&q=75 2x"
+          style="color: transparent;"
+          width="150"
+        />
+        <p>
+          60
+           
+          <span>
+            %
+          </span>
+        </p>
+      </div>
+      <div
+        class="w-full bg-[color:var(--background-body2)] flex flex-col justify-center text-center px-0 py-2 rounded-xl hover:bg-[color:var(--button-hover)] hover:text-[color:var(--text-main)]"
+      >
+        <h3>
+          Wind Speed
+        </h3>
+        <img
+          alt="5"
+          class="m-auto"
+          data-nimg="1"
+          decoding="async"
+          height="150"
+          loading="lazy"
+          src="/_next/image?url=%2Fimg.jpg&w=384&q=75"
+          srcset="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=384&q=75 2x"
+          style="color: transparent;"
+          width="150"
+        />
+        <p>
+          5
+           
+          <span>
+            m/s
+          </span>
+        </p>
+      </div>
+      <div
+        class="w-full bg-[color:var(--background-body2)] flex flex-col justify-center text-center px-0 py-2 rounded-xl hover:bg-[color:var(--button-hover)] hover:text-[color:var(--text-main)]"
+      >
+        <h3>
+          Clouds
+        </h3>
+        <img
+          alt="91"
+          class="m-auto"
+          data-nimg="1"
+          decoding="async"
+          height="150"
+          loading="lazy"
+          src="/_next/image?url=%2Fimg.jpg&w=384&q=75"
+          srcset="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=384&q=75 2x"
+          style="color: transparent;"
+          width="150"
+        />
+        <p>
+          91
+           
+          <span>
+            %
+          </span>
+        </p>
+      </div>
+      <div
+        class="w-full bg-[color:var(--background-body2)] flex flex-col justify-center text-center px-0 py-2 rounded-xl hover:bg-[color:var(--button-hover)] hover:text-[color:var(--text-main)]"
+      >
+        <h3>
+          Sunrise
+        </h3>
+        <img
+          alt="20:38"
+          class="m-auto"
+          data-nimg="1"
+          decoding="async"
+          height="150"
+          loading="lazy"
+          src="/_next/image?url=%2Fimg.jpg&w=384&q=75"
+          srcset="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=384&q=75 2x"
+          style="color: transparent;"
+          width="150"
+        />
+        <p>
+          20:38
+           
+          <span>
+            a.m.
+          </span>
+        </p>
+      </div>
+      <div
+        class="w-full bg-[color:var(--background-body2)] flex flex-col justify-center text-center px-0 py-2 rounded-xl hover:bg-[color:var(--button-hover)] hover:text-[color:var(--text-main)]"
+      >
+        <h3>
+          Sunset
+        </h3>
+        <img
+          alt="20:21"
+          class="m-auto"
+          data-nimg="1"
+          decoding="async"
+          height="150"
+          loading="lazy"
+          src="/_next/image?url=%2Fimg.jpg&w=384&q=75"
+          srcset="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=384&q=75 2x"
+          style="color: transparent;"
+          width="150"
+        />
+        <p>
+          20:21
+           
+          <span>
+            p.m.
+          </span>
+        </p>
+      </div>
+      <div
+        class="w-full bg-[color:var(--background-body2)] flex flex-col justify-center text-center px-0 py-2 rounded-xl hover:bg-[color:var(--button-hover)] hover:text-[color:var(--text-main)]"
+      >
+        <h3>
+          Pressure
+        </h3>
+        <img
+          alt="1010"
+          class="m-auto"
+          data-nimg="1"
+          decoding="async"
+          height="150"
+          loading="lazy"
+          src="/_next/image?url=%2Fimg.jpg&w=384&q=75"
+          srcset="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=384&q=75 2x"
+          style="color: transparent;"
+          width="150"
+        />
+        <p>
+          1010
+           
+          <span>
+            hPa
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
