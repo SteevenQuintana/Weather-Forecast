@@ -3,7 +3,7 @@
 exports[`Highlights should snapshots the Highlights component 1`] = `
 <div>
   <div
-    class="h-full mx-4 md:mx-0 mb-8 text-center flex flex-col bg-[#3054b7ca] p-4 rounded-2xl dark:bg-[#3a4957cc]"
+    class="h-full mb-8 text-center flex flex-col bg-[#3054b7ca] p-4 rounded-2xl dark:bg-[#3a4957cc]"
   >
     <h2
       class="text-2md font-bold mb-4"

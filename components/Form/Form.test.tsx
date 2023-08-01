@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom'
-import { render, screen } from '@testing-library/react'
+import { fireEvent, render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import Form from './Form'
 import useSearch from '@/hooks/useSearch'
@@ -58,9 +58,8 @@ describe('Form Component', () => {
     expect(input).toBeInTheDocument()
     await user.type(input, 'New York')
 
-    const button = screen.getByRole('button', { name: 'Search' })
-
-    await user.click(button)
+    const formElement = screen.getByTestId('weather-form')
+    fireEvent.submit(formElement)
     expect(mockedHandleSubmit).toHaveBeenCalled()
   })
 

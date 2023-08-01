@@ -5,7 +5,7 @@ import Image from 'next/image'
 const DayInformation = ({ forecast }: ForecastProps) => {
   if (forecast === null) return
   return (
-    <div className='h-full flex flex-col justify-between items-center text-center bg-[#3054b7ca] p-4 rounded-2xl dark:bg-[#3a4957cc] mx-4 md:mx-0'>
+    <div className='h-full flex flex-col justify-between items-center text-center bg-[#3054b7ca] p-4 rounded-2xl dark:bg-[#3a4957cc]'>
       <h2 className='text-2md font-bold'>Today's information</h2>
       <div className='h-[140px] flex w-[200px] overflow-hidden object-cover'>
         <Image

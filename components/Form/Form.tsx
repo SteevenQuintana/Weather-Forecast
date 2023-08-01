@@ -7,11 +7,12 @@ const Form = () => {
     useSearch()
 
   return (
-    <div className='mb-4 flex flex-col items-center'>
+    <div className='mb-5 flex flex-col items-center'>
       <h1 className='text-2xl font-bold mb-4'>Weather Forecast</h1>
       <form
         onSubmit={handleSubmit}
         className='flex gap-0.4 relative max-w-[360px] sm:gap-[2rem]'
+        data-testid='weather-form'
       >
         <input
           type='text'

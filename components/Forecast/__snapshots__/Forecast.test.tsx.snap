@@ -4,10 +4,11 @@ exports[`Forecast should snapshots the Forecast component 1`] = `
 <div>
   <div
     class="flex flex-col sm:grid sm:grid-cols-[40%_60%] gap-4"
+    data-testid="forecast"
   >
     <article>
       <div
-        class="h-full flex flex-col justify-between items-center text-center bg-[#3054b7ca] p-4 rounded-2xl dark:bg-[#3a4957cc] mx-4 md:mx-0"
+        class="h-full flex flex-col justify-between items-center text-center bg-[#3054b7ca] p-4 rounded-2xl dark:bg-[#3a4957cc]"
       >
         <h2
           class="text-2md font-bold"
@@ -106,7 +107,7 @@ exports[`Forecast should snapshots the Forecast component 1`] = `
     </article>
     <article>
       <div
-        class="h-full mx-4 md:mx-0 mb-8 text-center flex flex-col bg-[#3054b7ca] p-4 rounded-2xl dark:bg-[#3a4957cc]"
+        class="h-full mb-8 text-center flex flex-col bg-[#3054b7ca] p-4 rounded-2xl dark:bg-[#3a4957cc]"
       >
         <h2
           class="text-2md font-bold mb-4"

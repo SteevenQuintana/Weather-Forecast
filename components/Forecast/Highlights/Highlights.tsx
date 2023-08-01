@@ -12,7 +12,7 @@ import { getHour } from '@/helper/format'
 const Highlights = ({ forecast }: ForecastProps) => {
   if (forecast === null) return
   return (
-    <div className='h-full mx-4 md:mx-0 mb-8 text-center flex flex-col bg-[#3054b7ca] p-4 rounded-2xl dark:bg-[#3a4957cc]'>
+    <div className='h-full mb-8 text-center flex flex-col bg-[#3054b7ca] p-4 rounded-2xl dark:bg-[#3a4957cc]'>
       <h2 className='text-2md font-bold mb-4'>Today's Highlights</h2>
       <div className='grid grid-cols-[repeat(auto-fill,minmax(160px,1fr))] gap-3 h-full'>
         <Highlight
