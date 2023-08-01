@@ -2,7 +2,7 @@ import config from '@/config/config'
 import { Option } from '@/interfaces/cities.interface'
 import { getData } from '@/services/api'
 import { useRouter } from 'next/navigation'
-import { useCallback, useState } from 'react'
+import { useCallback, useState, useEffect } from 'react'
 import { toast } from 'react-hot-toast'
 
 const useSearch = () => {
@@ -16,7 +16,6 @@ const useSearch = () => {
     const { value } = event.target
     if (value.startsWith(' ')) return
     setSearch(value)
-    getCityInfo(value)
   }
 
   const getCityInfo = useCallback(async (value: string) => {
@@ -26,6 +25,8 @@ const useSearch = () => {
     }
     try {
       const data = await getData(`${config.CITY_API}&q=${value.trim()}`)
+      if (data.length === 0) throw new Error('No city found')
+
       const dataNeeded: Option[] = data.map((data: any) => ({
         name: data.name,
         lat: data.lat,
@@ -37,6 +38,7 @@ const useSearch = () => {
       return dataNeeded[0]
     } catch (err) {
       setError({ isError: true, message: (err as Error).message })
+      toast.error('The given city does not exist or is not a supported')
     }
   }, [])
 
@@ -50,7 +52,7 @@ const useSearch = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     if (options.length === 0) {
-      toast.error('City not found, please introduce a valid city')
+      toast.error('Please introduce a valid city')
       return
     }
     setOptions([])
@@ -60,6 +62,13 @@ const useSearch = () => {
 
     router.push(`/weather/${options[0].name}`)
   }
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      getCityInfo(search)
+    }, 300)
+    return () => clearTimeout(timer)
+  }, [search])
 
   return {
     error,
