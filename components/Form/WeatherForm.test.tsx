@@ -1,13 +1,13 @@
 import '@testing-library/jest-dom'
 import { fireEvent, render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import Form from './Form'
+import WeatherForm from './WeatherForm'
 import useSearch from '@/hooks/useSearch'
 
 jest.mock('@/hooks/useSearch')
 
-describe('Form Component', () => {
-  it('should render the Form component correctly', () => {
+describe('WeatherForm Component', () => {
+  it('should render the WeatherForm component correctly', () => {
     ;(useSearch as jest.Mock).mockReturnValue({
       handleSearch: jest.fn(),
       search: '',
@@ -15,7 +15,7 @@ describe('Form Component', () => {
       onSelectOption: jest.fn(),
       handleSubmit: jest.fn()
     })
-    render(<Form />)
+    render(<WeatherForm />)
     expect(screen.getByText('Weather Forecast')).toBeInTheDocument()
     expect(
       screen.getByPlaceholderText('Washington D.C, Ankara...')
@@ -35,7 +35,7 @@ describe('Form Component', () => {
       handleSubmit: jest.fn()
     })
 
-    render(<Form />)
+    render(<WeatherForm />)
     const input = screen.getByRole('textbox')
     expect(input).toBeInTheDocument()
     await user.type(input, 'New York')
@@ -53,7 +53,7 @@ describe('Form Component', () => {
       handleSubmit: mockedHandleSubmit
     })
 
-    render(<Form />)
+    render(<WeatherForm />)
     const input = screen.getByRole('textbox')
     expect(input).toBeInTheDocument()
     await user.type(input, 'New York')
@@ -76,7 +76,7 @@ describe('Form Component', () => {
       handleSubmit: jest.fn()
     })
 
-    render(<Form />)
+    render(<WeatherForm />)
 
     const country1Elements = screen.getAllByText((_, element) => {
       const textContent = element?.textContent ?? ''
@@ -101,7 +101,7 @@ describe('Form Component', () => {
       handleSubmit: jest.fn()
     })
 
-    render(<Form />)
+    render(<WeatherForm />)
     const optionButton = screen.getByRole('button', {
       name: 'Option 1, Country 1'
     })

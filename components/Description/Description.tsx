@@ -1,5 +1,5 @@
 const Description = () => (
-  <div className='text-center p-4 md:p-6 rounded-lg bg-[#3054b7c2] dark:bg-[#283644e4]'>
+  <div className='text-center p-4 md:p-6 rounded-lg bg-[#3054b7c2] dark:bg-[#283644e4] mx-2 mb-6'>
     <h1 className='text-4xl font-bold mb-4'>
       Welcome to the Weather Forecast Widget!
     </h1>

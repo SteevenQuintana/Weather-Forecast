@@ -1,7 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import Form from '@/components/Form/Form'
+import Form from '@/components/Form/WeatherForm'
 import ToasterProvider from '@/providers/TotasterProvider'
 
 const inter = Inter({ subsets: ['latin'] })

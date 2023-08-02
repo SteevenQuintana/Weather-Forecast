@@ -3,7 +3,7 @@
 exports[`Forecast should snapshots the Forecast component 1`] = `
 <div>
   <div
-    class="flex flex-col sm:grid sm:grid-cols-[40%_60%] gap-4"
+    class="flex flex-col md:grid sm:grid-cols-[30%_70%] gap-4 mx-2 md:pr-4"
     data-testid="forecast"
   >
     <article>

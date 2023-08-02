@@ -4,7 +4,7 @@ import DayInformation from './DayInformation/DayInformation'
 
 const Forecast = ({ forecast }: ForecastProps) => (
   <div
-    className='flex flex-col sm:grid sm:grid-cols-[40%_60%] gap-4'
+    className='flex flex-col md:grid sm:grid-cols-[30%_70%] gap-4 mx-2 md:pr-4'
     data-testid='forecast'
   >
     <article>
