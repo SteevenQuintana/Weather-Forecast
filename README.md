@@ -1,34 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Weather Forecast App - Discover the Weather Wonderland 🌦️🌈
+![image](https://github.com/SteevenQuintana/Weather-Forecast/assets/101366791/910f6739-7f47-4171-948b-d8b05118adf4)
 
-First, run the development server:
+## Introduction
+Welcome to Weather Forecast App, your ultimate weather destination to explore the fascinating world of weather! Its' an awe-inspiring web application that allows you to discover the weather forecast for any city across the globe. Get ready to embark on a journey of meteorological wonder as you explore the ever-changing landscapes of weather patterns.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Features
+- Real-Time Weather Data: With power of OpenWeather APIs to bring you up-to-date weather data for any location worldwide.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Search & Explore: With intuitive search feature, just type the name of your desired city, and behold a treasure trove of weather information at your fingertips.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- User-Friendly Interface: Whether you're a weather enthusiast or a casual user, our clean and user-friendly interface ensures an enjoyable experience for everyone.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Responsive Design: Access from your favorite device, be it a desktop, tablet, or smartphone.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- NextJS
+- TypeScript
+- Tailwind
+- Jest
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Environment Variables
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To run this project, you will need to add the following environment variables to your .env file
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+`PORT` by default is in 3000
+
+`NEXT_PUBLIC_API_KEY` you OpenWeather key
+
+`NEXT_PUBLIC_BASE_URL` base OpenWeather URL
+
+## Installation
+
+Install my-project with npm
+
+* Clone the repository on your local machine.
+* Install the dependencies with npm install.
+* Run the application with npm run dev.
+* Run All test with npm run test
+
+## Author
+
+- [stevenquintana](https://www.linkedin.com/in/stevenquintana/)
+
